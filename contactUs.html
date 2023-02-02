@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Contact US</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="/index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                         <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div>
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <button" type="button" onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="/shop.html">Shop</a>
+            <a href="/research.html">Research</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About Us</a>
+        </div>
+            
+        
+        <!-- section for banner of contact us  -->
+        <section class="about-contact-header" style = "color: black">
+            <h1 style="text-align: center; font-size: 30px; padding-top: 20px;">#Contact Us</h1>
+            <p style="text-align: center; font-size: 20px;" >We are bonsai enthusiasts first and we are here to help you every step of the way<br> through your bonsai journey.</p>
+        </section>
+
+        <!-- contact details with map section  -->
+        <section id="contact-details" class="Contact-info">
+            <div class="details">
+                <span>Get in touch</span>
+                <h2>Visit Us or Contact Us</h2>
+                <h3>Head Office</h3>
+                <div>
+                    <li> <button class="icons"><img src="/Images/map-solid.svg" alt="map-icon" width="17" height="17"></button> <a href="" class="detail"><p>Kamal Marg, Kamal Pokhari,
+                        Kathmandu, Nepal</p></a> </li>
+                    <li><button class="icons"><img src="/Images/mail.svg" alt="mail-icon" width="17" height="17"></button><a href="" class="detail"><p>info@islington.com</p></a></li>
+                    <li><button class="icons"><img src="/Images/phone.svg" alt="phone-icon" width="17" height="17"></button></button><a href="" class="detail"><p>01-5970012</p></a></li>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3116869756077!2d85.32304771470133!3d27.70766123208577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2z4KSH4KS44KWN4KSy4KS_4KSZ4KWN4KSf4KSoIOCkleCksuClh-CknA!5e0!3m2!1sne!2snp!4v1673536365553!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <!-- section for form with validation  -->
+        <section class="form-details">
+            <form name="messageForm" onsubmit="validate()">
+                <span>We would love to hear from you</span>
+                <h2>Message us</h2><br>
+                <label>First name: <br></label>
+                    <input class="input" type="text" name="firstName" placeholder="Enter your First name"><br><br>
+                    <label>Last name:<br></label>
+                    <input class="input" type="text" name="lastName" placeholder="Enter your LastName"><br><br>
+                    <label>Email:</label><br>
+                    <input class="input" type="email" name="email" placeholder="Enter your email"><br><br>
+                    <label>Message:</label><br>
+                    <textarea name="message" cols="80" rows="10" placeholder="Your Message Here"></textarea>
+                    <br><br>
+                    <input class="submit-button" type="submit" value="Send">
+            </form>
+    
+        </section>
+
+        <script>
+            function validate()
+            {
+                var fname = document.forms["messageForm"]["firstName"].value;
+                var lname = document.forms["messageForm"]["lastName"].value;
+                var mail = document.forms["messageForm"]["email"].value;
+                var message = document.forms["messageForm"]["message"].value;
+    
+                if(fname == "" || lname == "" || mail =="" || message == ""){
+                alert("Empty field found. Please fill the form");
+                }
+                else{
+                alert("Your form was submitted successfully");
+                }
+            }
+        </script>
+
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/shop.html">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="/research.html">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/blog.html">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="#">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+    <script>
+               const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+    </script>
+    </body>
+</html>

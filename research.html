@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Research</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <style>
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-image: url("Images/banner.jpg");
+                margin: 15px;
+                margin-top: 35px;
+                padding: 5% 20% 5% 20%;
+                gap: 5%;
+                background-position: center;
+                max-height: 30vh;
+            }
+
+            .headerTitle {
+                text-align: center;
+                font-size: 40px;
+            }
+
+            .headerContent {
+                font-size: x-large;
+            }
+
+            table {
+                max-width: 1500px;
+            }
+
+            th, td {
+                padding: 1rem;
+            }
+
+            th {
+                font-size: x-large;
+                font-weight: bold;
+                height: 70px;
+            }
+
+
+            .ss {
+                width: 500px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="/index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                        <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div>
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <div onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="/shop.html">Shop</a>
+            <a href="#" class="active">Research</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About Us</a>
+        </div>
+
+        <!-- this is a header division of research Page -->
+        <div class="header">
+            <div class="headerTitle" style="color:black;">
+                <h4>#Research</h4>
+            </div>
+            <div class="headerContent" style="color:black;">
+                <p>
+                    In This page we have described the comparison of webpage from where we have took the concept 
+                    to our webpage. This page shows our creativity that what we have made through our coursework.
+                </p>
+            </div>
+        </div>
+        
+        <!-- creating table for the research section which consists 3 columns -->
+        <table class="researchTable">
+            <tr>
+                <th>Refrence Page</th>
+                <th>Actual Page</th>
+                <th>Conclusion</th>
+            </tr>
+
+            <tr>
+                <td><a href="https://bonsaihaat.in/""><img class="ss" src="/Images/Reference header.png" alt=""></a></td>
+                <td><img class="ss" src="/Images/main home.png" alt=""></td>
+                <td>
+                    <p>
+                        In this section we have taken the idea from 
+                        <a href="https://bonsaihaat.in/" style="color: green;">bonsaihaat.in</a>
+                        on the navigation bar and we 
+                        changed the hover effects and made it centre justified as it is. We have 
+                        changed the main home webpage for the hottest product.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.flipkart.com/"><img class="ss" src="/Images/Reference footer.png" alt=""></a></td>
+                <td><img class="ss" src="/Images/Actual page footer.png" alt=""></td>
+                <td>
+                    <p>
+                        In the footer we have taken idea and concept from 
+                        <a href="https://www.flipkart.com/" style="color: blue;">flipkart.com</a>
+                        and refine with our creativity. 
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.flipkart.com/"><img class="ss" src="/Images/Reference shop items.png" alt=""></a></td>
+                <td><img class="ss" src="/Images/Actual page shop items.png" alt=""></td>
+                <td>
+                    <p>
+                        For the shop page we again taken the little concept of 
+                        <a href="https://www.flipkart.com/" style="color: blue;">flipkart.com</a>. 
+                        We have used grid for the products item having 4 column at 25% width of each items.
+                    </p>
+                </td>
+            </tr>
+
+        </table>
+
+
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/shop.html">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="#">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/blog.html">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/contactUs.html">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+    <script>
+               const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+    </script>
+    </body>
+</html>

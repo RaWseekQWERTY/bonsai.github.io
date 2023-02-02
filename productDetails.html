@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Product details</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                       <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div class="cart">
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                            <p id="itemCounter">0</p>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <div onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="/shop.html">Shop</a>
+            <a href="/research.html">Research</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About Us</a>
+        </div>
+            
+        
+
+         <!-- creating table for Product Images and description  -->
+    <table class="productdetails">
+        <td class="productImage">
+            <img src="/Images/product1.jpg" alt="Bonsai Images"  >
+        </td>
+        <td class="productDescription">
+            <h2>3 Years Old Ficus Racemosa bonsai in Broom Style</h2>
+            <br>
+            <span style="color: rgb(6, 183, 53);font-size: 25px;">$50</span>
+            <br><br>
+            <p>A stunning Ficus Racemosa bonsai with dense foliage in the broom style.</p>
+            <br>
+            <div class="button">
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </td>
+    </table>
+    <br><br><br>
+    <!-- creating division for recomended items of bonsai -->
+    <div class="headerRecomendedItems">
+        <span>Recomended Items</span>
+    </div>
+    <br><br>
+    <div class="recomendation">
+        <div class="recomendedItems">
+            <a href="#"><img src="/Images/Recomended Item 1.jpg" alt="RI1"></a>
+            <h4>Crasula Bonsai</h4>
+        </div>
+        <div class="recomendedItems">
+            <a href="#"><img src="/Images/Recomended Item 2.jpg" alt="RI2"></a>
+            <h4>Japanese flowering Bonsai</h4>
+        </div>
+        <div class="recomendedItems">
+            <a href="#"><img src="/Images/Recomended Item 3.jpg" alt="RI1"></a>
+            <h4>Windswept Bonsai</h4>
+        </div>
+        <div class="recomendedItems">
+            <a href="#"><img src="/Images/Recomended Item 4.jpg" alt="RI1"></a>
+            <h4>Cedar Tree</h4>
+        </div>
+        <div class="recomendedItems">
+            <a href="#"><img src="/Images/Recomended Item 5.jpg" alt="RI1"></a>
+            <h4>Red Flowered Bonsai</h4>
+        </div>
+    </div>
+    <br><br>
+    <!-- creating varioius division under a division for service provided -->
+    <div class="services">
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/delivery_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>All Nepal Delivery</h3>
+                    <span>Free Shipping</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/satisfiedCustomers_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>Highly Satisfied Customer</h3>
+                    <span>100% positive feedback</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/bulkOrder_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>Gift your friend</h3>
+                    <span>we accept bulk order</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/healthyPlant_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>Quality Guarantid</h3>
+                    <span>Healthier Plants</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/shop.html">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="/research.html">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/blog.html">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/contactUs.html">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+    <script>
+               const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+    </script>
+    </body>
+</html>

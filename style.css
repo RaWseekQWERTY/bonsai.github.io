@@ -1,0 +1,411 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Arial,sans serif,The Times Roman";
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  padding: 10px;
+  transition: 1.25s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 1.25s;
+}
+
+/**Navigation Starts*/
+.TopNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.right_TopNav {
+  display: flex;
+  align-items: center;
+  width: 235px;
+  flex-direction: row-reverse;
+}
+.logo
+{
+ margin: 0 9px;
+}
+
+/*css for search button*/
+.search{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 41px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  overflow: hidden;
+  transition: all 0.6s;
+}
+#mysearch
+{
+  margin-bottom: 8px;
+}
+.search-svg
+{
+  margin-left: 18px;
+}
+
+.search.active{
+  width: 650px !important;
+  border: 1px solid rgb(100, 90, 90);
+}
+
+.search-svg.active
+{
+  margin-left: -6px;
+}
+
+.search .input{
+  position: relative;
+  left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 200px;
+}
+
+.search .input input{
+  position: absolute;
+  width: 80%;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 0 13px;
+}
+
+.input{
+  border: none !important;
+}
+
+::placeholder{
+  color: grey;
+}
+
+/* css for cart with item counter*/
+.cart{
+  display: flex;
+}
+
+.cart p {
+  background-color: rgb(216, 6, 6);
+  border-radius: 100%;
+  font-size: small;
+  padding: 0 3px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+#DarkButton {
+  cursor: pointer;
+}
+
+.BottomNav {
+  position: fixed;
+  top: 45px;
+  border: solid gray 0.5px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  margin: 0 33% 0 33%;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.BottomNav a {
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.BottomNav a:hover {
+  color: #50C878;
+}
+
+.BottomNav a::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #228B22;
+  transition: all .5s;
+}
+
+.BottomNav a:hover::before { 
+  width: 100%;
+}
+
+.BottomNav a.active::before{
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  width: 100%;
+  height: 3px;
+  background-color: #228B22;
+  }
+
+/**Main Section*/
+.logo {
+  width: 25px;
+  cursor: pointer;
+}
+
+section {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* css for add to cart button  */
+.addToCart{
+  height: 30px;
+  width: 85px;
+  background-color: rgb(7, 199, 7);
+  font-style: italic;
+  border: 1px solid green;
+  border-radius: 27px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.addToCart:hover {
+  background-color: rgb(249, 180, 4)
+}
+/* ...................................... */
+
+
+/* css for services provided */
+.services {
+  margin: 0% 15% 0% 15%;
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+  
+.servicesItems {
+  display: flex;
+  justify-content: space-between
+}
+  
+.servicesIcon > img {
+  margin-right: 10px;
+}
+/* css for service provided */
+  
+
+
+
+/* css for Product details and buying division of product details page */
+
+.productdetails {
+  margin: 5% 20% 0 20%;
+}
+  
+.productImage > img {
+  max-height: 500px;
+  max-width: fit-content;
+  border-radius: 5%;
+}
+  
+.button >  button {
+  height: 40px;
+  width: 85px;
+  background-color: rgb(7, 199, 7);
+  font-style: italic;
+  border-radius: 27px;
+  cursor: pointer;
+}
+  
+.productDescription .button > button:hover {
+  background-color: rgb(231, 173, 12);
+}
+  
+/* css for Product details and buying division of product details page */
+  
+  
+  
+  
+  
+/* css for recomended items and description of product details page */
+.headerRecomendedItems {
+  padding-top: 70px;
+  margin-left: 3.5%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.recomendation {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.recomendedItems:hover {
+  transition: 1s;
+}
+
+.recomendedItems:hover {
+  transform: scale(1.18)
+}
+
+.recomendedItems > a > img {
+  border-radius: 5%;
+  border: 2px solid gray;
+  max-width: 150px;
+  max-height: 150px;
+}
+/* css for recomended items and description of product details page*/
+  
+  
+/*Contact us Page*/
+.about-contact-header {
+  margin-top: 11px;
+  max-width: 100%;
+  max-height: 110px;
+}
+
+.about-contact-header {
+  background: url("Images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 490px;
+}
+
+.about-contact-header::before {
+  content: "";
+  background-image: url("Images/banner.jpg");
+  opacity: 0.8;
+}
+
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+}
+
+.details li {
+  list-style: none;
+  padding: 10px 0;
+  display: flex;
+}
+
+.detail {
+  padding-left: 20px;
+  text-decoration: none;
+  color: black;
+
+}
+.detail:hover {
+  color: crimson;
+}
+
+.map iframe {
+  width: 600px;
+  height: 300px;
+
+}
+
+.form-details {
+  margin: 30px auto;
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 30px 20px;
+  background-color: #e1e1e1;
+  
+}
+
+.input {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.submit-button {
+  border: 2px solid #000;
+  border-radius: 3rem;
+  color: #000;
+  width: 100px;
+  height: 30px;
+  margin-left: 37em;
+}
+
+.submit-button:hover {
+  box-shadow: 1px 1px 1px;
+  cursor: pointer;
+}
+input, textarea
+{
+  background-color: whitesmoke;
+}
+.icons {
+  border: none;
+  background: white;
+}
+/* css for contact us page */
+  
+
+/**Footer*/
+footer {
+  margin-top: 50px;
+}
+
+.FootHeader > th {
+  text-align: left;
+  padding: 10px 40px;
+}
+
+.FootData > td {
+  text-align:justify;
+  padding: 0px 40px;
+}
+
+.SocialLogo {
+  width: 30px;
+}
+
+.PayLogo {
+  width: 40px;
+}
+
+.FootData > td:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.FootLogos {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+}

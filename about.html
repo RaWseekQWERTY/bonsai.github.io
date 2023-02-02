@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>About Us</title>
+    <style>
+        section {
+            margin: 40px 0;
+            padding: 20px;
+        }
+
+        main {
+            margin: 20px 0 0 6%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .Portfolio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            border: solid gray 2px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px 10px gray;
+            transition: all 0.5s;
+        }
+
+        .PortTxt {
+            width: 40%;
+            margin: 10px;
+            padding: 10px;
+        }
+        .PortTxt p {
+            padding: 10px 0px;
+        }
+
+        .PortImg > img {
+            height: 250px;
+            width: 250px;
+            border-radius: 5%;
+        }
+
+        .Portfolio:hover {
+            transform: scale(1.028);
+        }
+
+        .moreButton {
+            height: 30px;
+            width: 100px;
+            background-color:blanchedalmond;
+            border-radius: 27px;
+        }
+
+    </style>
+</head>
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="/index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                         <div class="right_TopNav">
+                        <!--search icon-->
+                        <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div>
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <div onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></div>
+                        </div>
+                    </div>
+                </div>
+                </div></nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="/shop.html">Shop</a>
+            <a href="/research.html">Research</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html" class="active">About Us</a>
+        </div>
+
+        <!--This main contains portfolio of each group member in each section-->
+        <main>
+            <section class="Portfolio">
+                <div class="PortTxt">
+                    <h2>Sheikh Md Abid</h2>
+                    <p>"I am a fullstack developer with raw experience. EverSince i enrolled in the islington college i have got a chance to work closely on the field of my desire."</p>
+                    <a href="/portfolio1.html"><button class="moreButton">More About Me</button></a>
+                </div>
+                <div class="PortImg">
+                    <img src="/Images/Sheikh.PNG">
+                </div>
+            </section>
+
+            <section class="Portfolio">
+                <div class="PortTxt">
+                    <h2>Sardul Ojha</h2>
+                    <p>"I am a new programmer even if so my desire for coding started at the age of 14 , i joined islington for the very reason of continuing my long held dream of being a top notch programmer."</p>
+                    <a href="#"><button class="moreButton">More About Me</button></a>
+                </div>
+                <div class="PortImg">
+                    <img src="/Images/Sardul.PNG">
+                </div>
+            </section>
+
+            <section class="Portfolio">
+                <div class="PortTxt">
+                    <h2>Rasik Kayastha</h2>
+                    <p>"I am a keen learner and ever since i joined islington, the situations have been favourable on my side for a proper platform to depict my skills and enhanced them."</p>
+                    <a href="#"><button class="moreButton">More About Me</button></a>
+                </div>
+                <div class="PortImg">
+                    <img src="/Images/Rasik.PNG">
+                </div>
+            </section>
+
+            <section class="Portfolio">
+                <div class="PortTxt">
+                    <h2>Aryan Kharel</h2>
+                    <p>"I am aryan, i joined islington to start programming from the base , the new found passion led me to a journey filled with ups and downs has been quite on the rough edge but islington has helped me a lot."</p>
+                    <a href="#"><button class="moreButton">More About Me</button></a>
+                </div>
+                <div class="PortImg">
+                    <img src="/Images/Aryan.PNG">
+                </div>
+            </section>
+        </main>
+
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/shop.html">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="/research.html">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/blog.html">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/contactUs.html">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                    <!-- <a href="#"><img src="/Images/Mail.png" class="PayLogo"></a> -->
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+    <script>
+             const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+    </script>
+    </body>
+</html>

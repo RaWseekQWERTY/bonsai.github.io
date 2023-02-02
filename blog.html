@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="script.js"></script>
+        <style>
+            .main-container
+            {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                max-height: 94vh;
+                padding: 0 32px;
+            }
+
+            .blog-image {
+                background-repeat: none;
+                float: right;
+            }
+
+            #blog-page {
+                margin-top: 119px;
+                display: flex;
+                justify-content: space-between;
+                text-align: justify;
+            }
+
+            .blog-page-icon {
+                border: none;
+                background: transparent;
+                padding-right: 10px;
+            }
+
+            .info_btn {
+                font-size: 15px;
+                color: black;
+                background: linear-gradient(to right,black 50%,white 0) 100%/200% no-repeat; 
+                width: 156px;
+                height: 33px;
+                margin-left: 18em;
+                border: solid 2px black;
+                border-radius: 65px;
+                cursor: pointer;
+                transition: all 1s;
+                }       
+
+            .info_btn:hover {
+                color: white;
+                background: linear-gradient(to right,black 50%,white 0) 0%/200% no-repeat;
+                border: solid 2px black;
+                border-radius: 100px;
+                }
+            .text-contents {
+                padding: 0 100px;
+                border-right: 1px solid gray;
+                width: 60%;
+                word-break: break-word;
+                line-height: 32px;
+                letter-spacing: 1.5px;
+            }
+
+            .words {
+                margin-top: 24px;
+            }
+
+            .extra-details {
+                width: 40%;
+                padding: 20px;
+            }
+
+            .more-contents {
+                margin-top: 3rem;
+                display: flex;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="/index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                         <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div class="cart">
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                            <p id="itemCounter">0</p>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <div onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="/shop.html">Shop</a>
+            <a href="/research.html">Research</a>
+            <a href="#" class="active">Blog</a>
+            <a href="/about.html">About Us</a>
+        </div>
+            
+        <main>
+            <!-- section for header of blog -->
+            <section class="about-contact-header" style = "color: black">
+                <div class="content">
+                    <h1 style="text-align: center; font-size: 30px;">#BLOG</h1>
+                    <p style="text-align: center; font-size: 20px; margin: 8px;" >TREE TALK<br>Increase your knowledge with us</p>
+                </div>
+            </section>
+            <!-- section for main text area of blog -->
+            <section class="main-container">
+                <span class="text-area">
+                    <br>
+                    <h4 style="text-align: end; font-style: italic;">Sunday,January 14 2023<br>featured blog</h4>
+                    <br><br>
+                    <p style="font-size: 24px; font-weight: bolder;">TechImpact: How Technology is Transforming Our Daily Lives and Businesses</p>
+                    <br>
+                    <p style="font-size: 17px; font-weight: 300; padding-right: 12px; text-align: justify;">The go-to hot take on How Technology is Revolutionizing Plant Science.This blog explores the many ways in which technology is impacting our daily lives and businesses. From the way we communicate and access information to the way we work and shop, technology is changing the way we do things. We'll take a closer look at some of the latest technology trends, such as artificial intelligence, automation, and the internet of things, and discuss how they are affecting various industries and aspects of our lives.</p>
+                    
+                    <li style = "list-style: none"><button class="blog-page-icon"><img src="Images/3peps.svg" alt="3 unknown people" width="19px" height="19px"></button><a href="" style="color: black;">By <span style="color: darkturquoise; padding-bottom: 8px;">L1Ai2 Group5</span></a></li>
+                    <button onclick="window.scrollBy(0,700)" class="info_btn">Start Reading</button>   
+                </span>
+                <div class="blog-image">
+                    <img src="Images/treewithtech.jpg" alt="aTreeshowcasingdevices" height="399px;" style="margin-left: 10px;">
+                </div>
+            </section>
+
+            <!-- articles of effects of technology in our daily life -->
+            <article id="blog-page">
+                <div class="text-contents">
+                    <h2>Effects Of Technology in our Daily Life</h2>
+                    <p class="words">
+                        Bonsai is the Japanese art of growing and training miniature trees in containers.This Japanese art was
+                        developed in Japan but its origin traces back to China.These miniature trees are restricted underr 4
+                        feet.
+                    </p>
+                    <p class="words"> These potted plants are dwarfed in a container in such a way that it grasps alot of eyes.g in a
+                        container.The primary goals of bonsai are for the viewer to reflect and for the grower to enjoy using
+                        their creativity and effort.
+                        Unlike other methods of plant cultivation.
+                    </p>
+                    <p class="words"> The way we live and do business has been fundamentally altered by technology. Technology has improved
+                        the convenience of communication, entertainment, and information access in our daily life. Technology
+                        has helped businesses automate processes, save costs, and grow internationally.
+                        Technology has made it feasible for botanists to examine plants in novel ways. Precision farming,
+                        genetic analysis, and plant breeding are a few of the ways technology has improved agricultural yields
+                        and deepened our understanding of plants.
+                    </p>
+                    <p class="words">However,The constant use of technology has been linked to an increase in sedentary behavior, which can lead to obesity and other health problems. Furthermore, the constant use of technology can also lead to addiction, and can affect our mental and emotional well-being.It's crucial to keep in mind, though, that technology is not without drawbacks. It has increased privacy
+                        worries and the ability to upend established market practices.
+                        The use of technology has significantly enhanced our daily life and businesses, yet it is crucial to utilize it
+                        wisely and efficiently.
+                    </p>
+                    <p class="words">
+                        In conclusion, technology has greatly impacted our everyday lives and has brought about a number of benefits, but it's also critical to be aware of its possible drawbacks and to use it carefully.
+                    </p>
+                </div>
+                
+                <!-- section for extra blogs -->
+                <div class="extra-details">
+                    <h2>More From Us</h2>
+                    <a href="https://medium.com/hackernoon/technology-fridays-why-bonsai-brings-is-a-great-addition-to-microsofts-ai-stack-bf8ad832e0c8"><div class="more-contents">
+                        <div class="more-texts">
+                            <h3>Technology Fridays: Why Bonsai is a Great Addition to Microsoft’s AI Stack</h3>
+                            <p style="color: gray;">Earlier this week, Microsoft announced that is continuing its acquisition spree by purchasing machine learning startup Bonsai. The...</p>
+                        </div>
+                            <img src="Images/extra1.jpg" alt="tree floating" width="80px" height="80px" style="margin-left: 8px;">
+                        </div>
+                    </a>
+                    <a href="https://judedoyle.medium.com/twitter-was-my-longest-toxic-relationship-ea31ac865637"><div class="more-contents">
+                        <div class="more-texts">
+                            <h3>Twitter Was My Longest Toxic Relationship</h3>
+                            <p style="color: gray;">This website tried to kill me on more than one occasion. I’ll be sad when it’s gone.</p>
+                        </div>
+                            <img src="Images/extra2.jpg" alt="two hands holding hands" width="80px" height="80px" style="margin-left: 8px;">
+                        </div>
+                    </a>
+                    <a href="https://medium.com/hackernoon/technology-fridays-why-bonsai-brings-is-a-great-addition-to-microsofts-ai-stack-bf8ad832e0c8"><div class="more-contents">
+                        <div class="more-texts">
+                            <h3>ChatGPT in an iOS Shortcut — Worlds Smartest HomeKit Voice Assistant</h3>
+                            <p style="color: gray;">Ever since I tried ChatGPT and GPT-3, everything else feels painfully dumb and useless: Siri, Alexa, Google Home and all other...</p>
+                        </div>
+                            <img src="Images/extra3.jpeg" alt="tree floating" width="80px" height="80px" style="margin-left: 8px;">
+                        </div>
+                    </a>
+                    <a href="https://medium.com/hackernoon/technology-fridays-why-bonsai-brings-is-a-great-addition-to-microsofts-ai-stack-bf8ad832e0c8"><div class="more-contents">
+                        <div class="more-texts">
+                            <h3>What if failure is the plan?</h3>
+                            <p style="color: gray;">I’ve been thinking a lot about failure lately. Failure comes in many forms, but I’m especially interested in situations in which people…</p>
+                        </div>
+                            <img src="Images/extra4.jpeg" alt="tree floating" width="80px" height="80px" style="margin-left: 8px;">
+                        </div>
+                    </a>
+                    <a href="https://medium.com/hackernoon/technology-fridays-why-bonsai-brings-is-a-great-addition-to-microsofts-ai-stack-bf8ad832e0c8"><div class="more-contents">
+                        <div class="more-texts">
+                            <h3>3 Scrum Principles for a Productive and Progressive Life (with Examples!)</h3>
+                            <p style="color: gray;">You can increase your productivity and growth by stealing some Agile/Scrum principles for life...</p>
+                        </div>
+                            <img src="Images/extra5.jpeg" alt="tree floating" width="80px" height="80px" style="margin-left: 8px;">
+                        </div>
+                    </a>
+                </div>
+            </article>
+        </main>
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/shop.html">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="/research.html">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="#">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/contactUs.html">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                    <!-- <a href="#"><img src="/Images/Mail.png" class="PayLogo"></a> -->
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+        <script>
+       const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+        </script>
+    
+    </body>
+</html>

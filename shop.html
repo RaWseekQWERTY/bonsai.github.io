@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Shop</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <style>
+            /* css for span of original price */
+            .price {
+                font-size: 15px;
+                text-decoration: line-through;
+                color: gray;
+            }
+
+            /* css for span of discounted price */
+            .discountedPrice {
+                font-size: 25px;
+                color: #50C878
+            }
+
+            /* Categories head */
+            .head {
+                text-align: center;
+                font-size: 300%;
+                margin: 35px;
+                margin-bottom: -15px;
+            }
+            /* Categories head */
+  
+  
+  
+            /*css for Categories Option filter design*/
+            .option {
+                margin-left: 92%;
+                border-radius: 30px;
+                width: 100px;
+                height: 20px;
+                font-size: 13px;
+            }
+
+            option {
+                font-family: serif;
+                color: darkgreen;
+                padding: 10px;
+            }
+            /*css for Categories Option filter design*/
+  
+  
+  
+  
+            /* css for products list container of shop page */
+            .products_grid_container {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-gap: 35px;
+                margin: 0px 30px;
+                padding: 30px;
+            }
+  
+            .product_grid_items {
+                padding: 60px 10px 0 10px;
+                height: 400px;
+                width: auto;
+                border-radius: 10px 10px 10px 10px;
+                text-align: center;
+                
+                border: solid gray;
+                transition: all 0.2s;
+            }
+  
+            .product_grid_items > a > img {
+                width: 50%;
+                height: 50%;
+            }
+  
+            .product_grid_items:hover {
+                box-shadow: 3px 3px 3px 3px gray;
+                transform: scale(1.028);
+            }
+  
+            /* css for products list container of shop page */
+  
+  
+  
+  
+            /* view more section  of Shop page*/
+            .viewMore {
+                text-align: center;
+                text-decoration: none;
+            }
+            /* view more section  of Shop page*/
+        </style>
+    </head>
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="/index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                       <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div class="cart">
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                            <p id="itemCounter">0</p>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <div onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="#" class="active">Shop</a>
+            <a href="/research.html">Research</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About Us</a>
+        </div>
+             <!--creating a division for our products and the categories option selector  -->
+    <div>
+        <h1 class="head"> Our Products</h1>
+        <select class="option">
+            <option value="All Products"><a href="#">All Products</a></option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Indoor">Indoor</option>
+            <option value="Tools">Tools</option>
+        </select>
+    </div>
+    <br>
+     
+    <!-- creating grid division for the products listing in 2D view with rows and column  -->
+
+    <div class="products_grid_container">
+        <div class="product_grid_items">
+            <a href="/productDetails.html" ><img src="/Images/product1.jpg" alt=""></a>
+                <h3>2 Years Old Umbrella Style Jade Mini Bonsai ( Small Size)</h3>
+                <span class="price">$ 6</span>
+                <span class="discountedPrice">$ 5.56</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#"><img src="/Images/Product3.jpg" alt=""></a>
+                <h3>Satsuki-Azalea-Korin-Bonsai</h3>
+                <span class="price">$ 16</span>
+                <span class="discountedPrice">$ 15.5</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#"><img src="/Images/product4.jpeg" alt=""></a>
+                <h3>Satsuki Bonsai Tree Blossom 2 VR / AR / low-poly 3d mode</h3>
+                <span class="price">$ 21</span>
+                <span class="discountedPrice">$ 18</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#"><img src="/Images/product5.jpeg" alt=""></a>
+                <h3>Flowering Chinzan Azalea Bonsai Tree
+                    Curved Trunk Style</h3>
+                <span class="price">$ 999</span>
+                <span class="discountedPrice">$ 950</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#"><img src="/Images/product6.jpeg" alt=""></a>
+                <h3>CREPE MYRTLE - LAGERSTROEMIA INDICA</h3>
+                <span class="price">$ 6</span>
+                <span class="discountedPrice">$ 5.6</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#"><img src="/Images/product7.jpeg" alt=""></a>
+                <h3>Bougainvillea Bonsai</h3>
+                <span class="price"></span>
+                <span class="discountedPrice">$ 300</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product8.jpeg" alt=""></a>
+                <h3>Japan Satsuki Bonsai</h3>
+                <span class="price">$ 6</span>
+                <span class="discountedPrice">$ 5.56</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product9.jpeg" alt=""></a>
+                <h3>Umbrella Style Jade Bonsai</h3>
+                <span class="price">$ 60</span>
+                <span class="discountedPrice">$ 55</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product10.jpeg" alt=""></a>
+                <h3>Bonsai Azalea</h3>
+                <span class="price">$ 20</span>
+                <span class="discountedPrice">$ 19</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product11.jpeg" alt=""></a>
+                <h3>Box wood - Superfly Bonsai</h3>
+                <span class="price">$ 600</span>
+                <span class="discountedPrice">$ 550</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product12.jpeg" alt=""></a>
+                <h3>Umbrella Bonsai</h3>
+                <span class="price">$ 1200</span>
+                <span class="discountedPrice">$ 1110</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product13.jpeg" alt=""></a>
+                <h3>Japanese Garden Bonsai</h3>
+                <span class="price">$ 67</span>
+                <span class="discountedPrice">$ 60</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product14.jpeg" alt=""></a>
+                <h3>Backyard Bonsai</h3>
+                <span class="price">$ 12</span>
+                <span class="discountedPrice">$ 6</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product15.jpeg" alt=""></a>
+                <h3>Yew Plum pine Podocarpus Macrophyllus</h3>
+                <span class="price">$ 1500</span>
+                <span class="discountedPrice">$ 1480</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product16.jpeg" alt=""></a>
+                <h3>Juniper Bonsai</h3>
+                <span class="price">$ 478</span>
+                <span class="discountedPrice">$ 470</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+        <div class="product_grid_items">
+            <a href="#" ><img src="/Images/product17.jpeg" alt=""></a>
+                <h3>japanese pinus Bonsai</h3>
+                <span class="price">$ 789</span>
+                <span class="discountedPrice">$ 750</span>
+                <br>
+                <span class="ratingStar">⭐⭐⭐⭐⭐</span>
+                <br><br>
+                <button class="addToCart" onclick="addToCart(bonsai)">Add To Cart</button>
+        </div>
+
+    </div>
+    <br>
+    <div class="viewMore">
+        <a href="#" style="text-decoration: none;">< View more ></a>
+    </div>
+    <br><br>
+    <!-- creating a division for service provided -->
+    <div class="services">
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/delivery_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>All Nepal Delivery</h3>
+                    <span>Free Shipping</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/satisfiedCustomers_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>Highly Satisfied Customer</h3>
+                    <span>100% positive feedback</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/bulkOrder_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>Gift your friend</h3>
+                    <span>we accept bulk order</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="servicesItems">
+                <div class="servicesIcon">
+                    <img src="/Images/healthyPlant_icon.png" alt="" width="50px" height="35px">
+                </div>
+                <div class="servicesDescription">
+                    <h3>Quality Guarantid</h3>
+                    <span>Healthier Plants</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="#">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="/research.html">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/blog.html">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/contactUs.html">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+    <script>
+               const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+    </script>
+    </body>
+
+</html>

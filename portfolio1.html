@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title></title>
+        <style>
+            ul {
+                list-style: square;
+                padding: 15px;
+            }
+
+            .portfolio {
+                padding: 20px;
+                margin: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+            }
+            .portfolio_image > img {
+                width: 500px;
+            }
+
+            .portfolio_details {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                width: 30%;
+                height: 300px;
+            }
+            
+            #hello {
+                color: red;
+            }
+
+            #name {
+                font-size: 50px;
+            }
+
+            #title {
+                font-size: 20px;
+                color: rgb(232, 57, 57);
+            }
+
+            .socLogo {
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+            }
+
+            .info_btn {
+                font-size: 15px;
+                color: black;
+                background: linear-gradient(to right,black 50%,white 0) 100%/200% no-repeat; 
+                width: 100px;
+                height: 33px;
+                border: solid 2px black;
+                border-radius: 100px;
+                cursor: pointer;
+                transition: all 1s;
+                }       
+
+            .info_btn:hover {
+                color: white;
+                background: linear-gradient(to right,black 50%,white 0) 0%/200% no-repeat;
+                border: solid 2px black;
+                border-radius: 100px;
+                }
+
+            .info {
+                padding: 20px;
+                margin: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .info_details {
+                padding: 20px;
+                padding-left: 50px;
+                max-width: 300px;
+                border: solid gray;
+                border-radius: 30px;
+                transition:all 0.5s;
+            }
+
+            .info_details:hover {
+                box-shadow: 3px 3px 3px 3px gray;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--header contains both navigation bar-->
+        <header>
+            <!--This is the top navigation bar which contains logo, search icon, cart logo and the dark mode switch -->
+            <nav>
+                <div class="TopNav">
+                    <!--main logo-->
+                    <div>
+                        <a href="/index.html"><img class="" src="/Images/main_logo.png" alt="main logo" width="60px"></a>
+                    </div>
+
+                    <!--right of top navigation bar -->
+                    <div class="right_TopNav">
+                        <!--search icon-->
+                        <div class="search" id="mainsearch">
+                            <div class="icon" >
+                                <img id="searchICON" class="search-svg" src="Images/blacksearch.png" width="27px" height="27px">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                            </div>
+                        </div>
+                        
+                        <!--cart icon-->
+                        <div>
+                            <a href="shop.html"><img class="logo" src="/Images/cart_icon.png" alt="cart logo" id="CartLogo"></a>
+                        </div>
+                        
+                        <!--the dark mode switch-->
+                        <div>
+                            <div  onclick="mode()"><img src="/Images/moon.png" class="logo" id="DarkButton"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+        <!--This is the bottom navigation bar which contains links to other pages-->               
+        <div class="BottomNav" id="Navbar">
+            <a href="/index.html">Home</a>
+            <a href="/shop.html">Shop</a>
+            <a href="/research.html">Research</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html" class="active">About Us</a>
+        </div>
+        <!--Main section contains personal portfolio, skills, experience and education.-->
+        <main>
+            <!--This div contains main portfolio part-->
+            <div class="portfolio">
+                <div class="portfolio_details">
+                    <h5 id="hello">Hello, I'm</h5>
+                    <h2 id="name">Sheikh Md Abid</h2>
+                    <h5 id="title">A creative web developer from Nepal</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo recusandae saepe aliquid vel porro rem laboriosam id soluta architecto eligendi nam ipsa, deleniti tempora, a fugit dolorum voluptatum. Eum, error.</p>
+                    <div>   
+                        <a href="#"><img src="/Images/fb.PNG" alt="" class="socLogo"></a>
+                        <a href="#"><img src="/Images/ig.png" alt="" class="socLogo"></a>
+                        <a href="#"><img src="/Images/ln.png" alt="" class="socLogo"></a>
+                        <a href="#"><img src="/Images/gh.png" alt="" class="socLogo"></a>
+                    </div>
+                    <button onclick="window.scrollBy(0,700)" class="info_btn">More Info &darr;</button>
+                </div>
+                <div class="portfolio_image">
+                    <img src="/Images/Sheikh.PNG" alt="">
+                </div>
+            </div>
+
+            <hr>
+            <!--This div contains personal details-->
+            <h2 style="padding: 30px; margin: 30px; margin-left: 130px">More About Me</h2>
+
+            <div class="info">
+                <div class="info_details">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java (OOPs)</li>
+                        <li>SQL (MySQL)</li>
+                    </ul>
+                </div>
+                <div class="info_details">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>ABC</li>
+                        <li>ABC</li>
+                        <li>ABC</li>
+                    </ul>
+                </div>
+                <div class="info_details">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Elementary Education(SEE)</li>
+                        <li>Higher Education(+2)</li>
+                        <li>BSc (Hons) Computing with Artificial Intelligence (Ongoing)</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!--As the tag says the footer-->
+        <footer>
+            <!--main footer containing all the elements in the table-->
+            <table width="100%">
+                <tr class="FootHeader">
+                    <th>Quick Links</th>
+                    <th>About</th>
+                    <th>My Account</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/index.html">Home</a></td>
+                    <td>About Us</td>
+                    <td>Sign In</td>
+                    <td>+977-9811111111 (NTC)</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/shop.html">Shop</a></td>
+                    <td>Delivery Information</td>
+                    <td>View Cart</td>
+                    <td>+977-9822222222 (Ncell)</td>
+                </tr>
+                <tr Class="FootData">
+                    <td><a href="/research.html">Research</a></td>
+                    <td>Privacy Policy</td>
+                    <td>My Wishlist</td>
+                    <td>bonsai@gmail.com</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/blog.html">Blog</a></td>
+                    <td>Terms & Conditions</td>
+                    <td>Track My Order</td>
+                    <td>Nepal, Kathmandu - 44600</td>
+                </tr>
+                <tr class="FootData">
+                    <td><a href="/contactUs.html">Contact Us</a></td>
+                    <td>Organization</td>
+                    <td>Help</td>
+                    <td>Bonsai Ghar</td>
+                </tr>
+            </table>
+
+            <!--Final footer(div) containing social media, payment methods and copyright-->
+            <div class="FootLogos">
+                <div class="SocMedia">
+                    <h6>Follow US</h6>
+                    <a href="#"><img src="/Images/Facebook.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Instagram.png" class="SocialLogo"></a>
+                    <a href="#"><img src="/Images/Twitter.png" class="SocialLogo"></a>
+                </div>
+                <div class="Payments">
+                    <h6>Secured Payment Gateways</h6>
+                    <a href="#"><img src="/Images/Esewa.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Khalti.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/paypal.png" class="PayLogo"></a>
+                    <a href="#"><img src="/Images/Visa.png" class="PayLogo"></a>
+                    <!-- <a href="#"><img src="/Images/Mail.png" class="PayLogo"></a> -->
+                </div>
+            </div>
+            
+            <!--The last line of home page-->
+            <div align="center">
+                &#169; 2023 Bonsai Ghar
+            </div>
+
+        </footer>
+    <script>
+               const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const searchInput = document.querySelector('.search-svg');
+            icon.onclick = function(){
+                search.classList.toggle('active')
+                searchInput.classList.toggle('active')
+            }
+    </script>
+    </body>
+</html>
