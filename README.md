@@ -6,7 +6,8 @@
   Tools Used: Front-end: HTML, CSS, JavaScript
   
 ### Screenshots:
-  
+  shop.png
+  bonsai.png
   
 ### Official SIte
 https://bonsaighar.netlify.app/
