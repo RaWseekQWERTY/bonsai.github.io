@@ -8,5 +8,15 @@
 ### Screenshots:
   <img src="shop.png" width=100% height=100%>
   <img src="bonsai.png" width=100% height=100%>  
+
+
+### Features
+    * Dark Mode
+    * Add to card
+    * All available pages
+    * Typewriter effect
+    
+
+
 ### Official SIte
 https://bonsaighar.netlify.app/
